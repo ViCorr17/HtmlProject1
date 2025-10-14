@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Ensures proper rendering in older IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>First HTML project</title>
+  <!-- Basic SEO description (you can fill this later) -->
+  <meta name="description" content="">
+  <!-- Mobile-friendly scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- External stylesheet (not required for HTML-only checkpoint, but fine to keep) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Site-wide navigation using semantic <nav> -->
+  <nav>
+    <!-- Use a list for nav links to improve semantics and accessibility -->
+    <ul>
+      <!-- Local links: each href points to a section id below -->
+      <li><a href="#home">HOME</a></li> <!-- Consider adding a #home section or change to #about -->
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#work">WORK</a></li>
+      <li><a href="#resume">RESUME</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content of the page; improves semantics for screen readers -->
+  <main>
+    <!-- ABOUT SECTION: introduces you and includes media -->
+    <section id="about">
+      <!-- Section heading; keep heading levels consistent (use h1 once per page, h2 for sections) -->
+      <h2>About me</h2>
+      <!-- Intro paragraph about you -->
+      <p>
+        Hello, I’m Victor, a passionate and driven tech enthusiast with a growing expertise in web development
+        and modern digital solutions. My journey into tech is fueled by curiosity and the desire to create tools,
+        websites, and applications that don’t just look good, but also solve real problems.
+      </p>
+
+      <!-- Personal image: include real src path and descriptive alt text -->
+      <img src="mizzy.jpg" width="300" height="420" alt="Picture of myself">
+      <br>
+      <!-- Audio element: controls allow play/pause; source must be a valid file path -->
+      <audio controls>
+        <!-- Use a correct MIME type (audio/mpeg for .mp3 is common) -->
+        <source src="MOODrill.mp3" type="audio/mpeg">
+        <!-- Fallback text for unsupported browsers -->
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- WORK SECTION: showcases projects; use <article> for self-contained items -->
+    <section id="work">
+      <h2>My work</h2>
+
+      <!-- Project 1 -->
+      <article>
+        <h3>Tribute Page</h3>
+        <p>A simple tribute page dedicated to someone I admire</p>
+        <!-- Link to project (replace # with actual URL or file path when available) -->
+        <a href="#">View project</a>
+      </article>
+
+      <!-- Project 2 with a table: use table semantics to present tabular data -->
+      <article>
+        <h3>Restaurant Menu</h3>
+        <p>A digital menu showcasing dishes and prices, built with tables</p>
+
+        <!-- Table: caption, thead, tbody improve semantics -->
+        <!-- Note: border attribute is okay for HTML-only demo; in production use CSS -->
+        <table border="2">
+          <caption>Menu</caption>
+          <thead>
+            <tr>
+              <th>Dish</th>
+              <th>Category</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jollof Rice</td>
+              <td>Main</td>
+              <td>$10</td>
+            </tr>
+            <tr>
+              <td>Chicken Suya</td>
+              <td>Starter</td>
+              <td>$6</td>
+            </tr>
+            <tr>
+              <td>Chapman</td>
+              <td>Drink</td>
+              <td>$3</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Project 3 -->
+      <article>
+        <h3>Resume Page</h3>
+        <p>A clean resume layout with lists for skills and education</p>
+        <a href="#">View project</a>
+      </article>
+    </section>
+
+    <!-- RESUME SECTION: education, skills, and optional download link -->
+    <section id="resume">
+      <h2>Resume</h2>
+
+      <!-- Education block; lists are good for concise items -->
+      <h3>Education</h3>
+      <ul>
+        <!-- Keep items short; detailed text can be a paragraph below if needed -->
+        <li>
+          Kwara State University (KWASU) — Bachelor’s studies in Computer Science. Focused on web development,
+          problem‑solving, and modern digital technologies.
+        </li>
+      </ul>
+
+      <!-- Skills list -->
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+      <!-- Local file download link (place resume.pdf inside docs/ or update path) -->
+      <p><a href="docs/resume.pdf" download>Download resume</a></p>
+    </section>
+
+    <!-- CONTACT SECTION: HTML form with labeled fields -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <!-- Form: action is placeholder (#) since there’s no backend in this checkpoint -->
+      <form action="#" method="post">
+        <!-- Labels associate to inputs via for/id; name attributes are needed for submission -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <!-- Submit button to send form data -->
+        <input type="submit" value="Send">
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER: page ending info -->
+  <footer>
+    <!-- Update year/name as needed -->
+    <p>&copy; 2025 Arobieke Victor. All rights reserved.</p>
+  </footer>
+</body>
+</html>
