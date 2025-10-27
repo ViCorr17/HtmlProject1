@@ -18,7 +18,7 @@
   <!-- Site-wide navigation using semantic <nav> -->
   <nav>
     <!-- Use a list for nav links to improve semantics and accessibility -->
-    <ul>
+    <ul class="nav-ul">
       <!-- Local links: each href points to a section id below -->
       <li><a href="#home">HOME</a></li> <!-- Consider adding a #home section or change to #about -->
       <li><a href="#about">ABOUT</a></li>
@@ -33,20 +33,20 @@
     <!-- ABOUT SECTION: introduces you and includes media -->
     <section id="about">
       <!-- Section heading; keep heading levels consistent (use h1 once per page, h2 for sections) -->
-      <h2>About me</h2>
+      <h2 class="project-card">About Me</h2>
       <!-- Intro paragraph about you -->
-      <p>
+      <p class="intro-text">
         Hello, I’m Victor, a passionate and driven tech enthusiast with a growing expertise in web development
         and modern digital solutions. My journey into tech is fueled by curiosity and the desire to create tools,
         websites, and applications that don’t just look good, but also solve real problems.
       </p>
 
       <!-- Personal image: include real src path and descriptive alt text -->
-      <img src="mizzy.jpg" width="300" height="420" alt="Picture of myself">
+      <img src="mizzy.jpg" width="300" height="420" alt="Picture of myself" class="hero-img">
       <br>
       <!-- Audio element: controls allow play/pause; source must be a valid file path -->
-       <h3>My fav song 👇👇</h3>
-      <audio controls>
+       <h3>My Fav Song 👇👇</h3>
+       <audio controls>
         <!-- Use a correct MIME type (audio/mpeg for .mp3 is common) -->
         <source src="MOODrill.mp3" type="audio/mpeg">
         <!-- Fallback text for unsupported browsers -->
@@ -56,7 +56,7 @@
 
     <!-- WORK SECTION: showcases projects; use <article> for self-contained items -->
     <section id="work">
-      <h2>My work</h2>
+      <h2 class="project-card">My Work</h2>
 
       <!-- Project 1 -->
       <article>
@@ -73,16 +73,16 @@
 
         <!-- Table: caption, thead, tbody improve semantics -->
         <!-- Note: border attribute is okay for HTML-only demo; in production use CSS -->
-        <table border="2">
-          <caption>Menu</caption>
-          <thead>
+        <table border="3" class="table">
+          <caption>MENU</caption>
+          <!-- <thead> -->
             <tr>
               <th>Dish</th>
               <th>Category</th>
               <th>Price</th>
             </tr>
-          </thead>
-          <tbody>
+          <!-- </thead> -->
+          <!-- <tbody> -->
             <tr>
               <td>Jollof Rice</td>
               <td>Main</td>
@@ -98,7 +98,7 @@
               <td>Drink</td>
               <td>$3</td>
             </tr>
-          </tbody>
+          <!-- </tbody> -->
         </table>
       </article>
 
@@ -112,33 +112,31 @@
 
     <!-- RESUME SECTION: education, skills, and optional download link -->
     <section id="resume">
-      <h2>Resume</h2>
+      <h2 class="project-card">Resume</h2>
 
       <!-- Education block; lists are good for concise items -->
       <h3>Education</h3>
-      <ul>
+      <p>
         <!-- Keep items short; detailed text can be a paragraph below if needed -->
-        <li>
           Kwara State University (KWASU) — Bachelor’s studies in Computer Science. Focused on web development,
           problem‑solving, and modern digital technologies.
-        </li>
-      </ul>
+      </p>
 
       <!-- Skills list -->
       <h3>Skills</h3>
-      <ul>
+      <ul class="skill-ul">
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
       </ul>
 
       <!-- Local file download link (place resume.pdf inside docs/ or update path) -->
-      <p><a href="docs/resume.pdf" download>Download resume</a></p>
+      <p><a href="#">Download resume</a></p>
     </section>
 
     <!-- CONTACT SECTION: HTML form with labeled fields -->
     <section id="contact">
-      <h2>Contact Me</h2>
+      <h2 class="project-card">Contact Me</h2>
 
       <!-- Form: action is placeholder (#) since there’s no backend in this checkpoint -->
       <form action="#" method="post">
@@ -151,8 +149,8 @@
         <input type="email" id="email" name="email" required>
         <br><br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message" >Message:</label>
+        <textarea id="message" name="message" rows="5" required class="texto"></textarea>
 
         <!-- Submit button to send form data -->
         <input type="submit" value="Send">
